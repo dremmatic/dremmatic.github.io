@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+
     <style>
         h2,
         h2 {
@@ -34,30 +36,78 @@
             margin: 10px auto;
             width: 50%;
         }
+
+        table {
+            font-family: 'Courier New', Courier, monospace;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 8px;
+        }
     </style>
 </head>
 
 <body>
+    <div class="container">
+        <ul class="nav">
+            <li> <a class="active-navpage" href="index.html">Home</a></li>
+            <li> <a href="about.html">about</a></li>
+            <li> <a href="contact.html">contact</a></li>
+        </ul>
 
-    <h1>Today we will learn abt adding CSS</h1>
-    <h2>this is how we add style w inline CSS</h2>
-    <p>this paragraph got no style</p>
-    <p style="color:aqua;">this is a seagreenparagraph</p>
-    <p style="color:rgb(#eb74c9); font-size: 50px;">this is pink with font size 50px</p>
-    <p style="color:rgb(#2314ab); font-size: 24px; text-align: center;">this is a red font size 24, centered, with coral
-        background</p>
+        <h1>Today we will learn abt adding CSS</h1>
+        <h2>this is how we add style w inline CSS</h2>
+        <p>this paragraph got no style</p>
+        <p style="color:aqua;">this is a seagreenparagraph</p>
+        <p style="color:rgb(#eb74c9); font-size: 50px;">this is pink with font size 50px</p>
+        <p style="color:rgb(#2314ab); font-size: 24px; text-align: center;">this is a red font size 24, centered, with
+            coral
+            background</p>
 
-    <h2>this is how we add style with internal scs, id selectors</h2>
-    <p id="blue-text">i want this text to be blue</p>
-    <p>this one should be red</p>
-    <p id="multi-text">this one should be pink, 24px, and right aligned</p>
+        <h2>this is how we add style with internal scs, id selectors</h2>
+        <p id="blue-text">i want this text to be blue</p>
+        <p>this one should be red</p>
+        <p id="multi-text">this one should be pink, 24px, and right aligned</p>
 
-    <h2>let's do this with class selectors now</h2>
-    <p class="big-text">i want this text to be big</p>
-    <p class="big-text right-text">i want this tex to be really big and right aligned</p>
+        <h2>let's do this with class selectors now</h2>
+        <p class="big-text">i want this text to be big</p>
+        <p class="big-text right-text">i want this tex to be really big and right aligned</p>
 
-    <h2>This is how u center an image</h2>
-    <img src="" alt="" class="centered">
+        <h2>This is how u center an image</h2>
+        <img src="" alt="" class="centered">
+
+        <h2>html table</h2>
+        <table>
+            <tr>
+                <th>first name</th>
+
+                <th>last name</th>
+            </tr>
+            <tr>
+                <td>emma</td>
+                <td>wang</td>
+            </tr>
+            <tr>
+                <td>bob</td>
+                <td>the builder</td>
+            </tr>
+
+        </table>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2705.8937855980007!2d-122.30167722490381!3d47.29687520931603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54905794b3c00001%3A0x3c274313fcd4807e!2sBlack%20Liquor%20Recovery%20Boiler%20Advisory%20Committee!5e0!3m2!1sen!2sus!4v1694708298070!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/lBiPw2IE70s?si=uZ0dT5RkPOCnFgqf">
+        </iframe>
+    </div>
 
 </body>
 
