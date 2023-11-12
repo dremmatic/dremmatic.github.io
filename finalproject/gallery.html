@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/nlt8fuq.css">
+
+
+
+
+    <style>
+        /*overlaytext*/
+
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: white;
+        }
+
+        .container:hover .overlay {
+            opacity: 50%;
+        }
+
+        .text {
+            color: #fd9fd5;
+            font-size: 20px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+
+
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            -ms-flex: 50%;
+            /* IE10 */
+            flex: 50%;
+            max-width: 50%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+
+
+
+
+        form {
+            display: flex;
+            flex-direction: row;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            /* Adjust the spacing between radio buttons as needed */
+        }
+    </style>
+
+
+</head>
+
+<body class="bg-white text-black">
+    <div>
+        <nav class="container-fluid navbar navbar-expand-sm bg-white navbar-white">
+            <div class="collapse navbar-collapse ms-auto" id="navbarNav" style="padding-left: 10px;">
+
+                <div class="dropdown">
+                    <button class="btn btn-outline-tertiary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="index.html">Home</a></li>
+                        <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="navbar-brand" href="#">
+                <h2 class="text-center fadeInUp-animation">HIROSHI NAGAI</h2>
+
+            </a>
+        </nav>
+
+    </div>
+
+
+    <div style="padding-left: 10%;">
+        <div class="typed-out">
+            <h1 style="text-align: left; color: #fd9fd5;"> G A L L E R Y</h1>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div style="align-items: center; padding-left: 50px;">
+        <h2>Which of these album arts is your favorite?</h2>
+        <p id="trivia-answer"></p>
+        <form action="">
+            <input type="radio" name="trivia" id="sunpatio">
+            <label for="sunpatio"><img src="images/sunpatio.webp" style="width: 75%;"></label>
+
+            <input type="radio" name="trivia" id="moonlightmystery">
+            <label for="moonlightmystery"><img src="images/moonlightmystery.webp" style="width: 75%;"></label>
+
+            <input type="radio" name="trivia" id="alongvacation">
+            <label for="alongvacation"><img src="images/alongvacation.jpg" style="width: 75%;"></label>
+        </form>
+        <br>
+        <input style="align-content: center;" type="button" value=" S U B M I T " onclick="trivia()">
+
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+    <!-- Photo Grid -->
+    <div class="row">
+        <div class="column">
+            <img src="images/Fall of Sound.png" style="width:100%">
+            <img src="images/deck.jpg" style="width:100%">
+            <img src="images/nobody has to know.webp" style="width:100%">
+            <img src="images/Longs For Summer.png" style="width:100%">
+
+        </div>
+        <div class="column">
+            <img src="images/pink car.png" style="width:100%">
+            <img src="images/The Limelight.png" style="width:100%">
+            <img src="images/taxiway.png" style="width:100%">
+            <img src="images/chillside.png" style="width:100%">
+            <img src="images/surfsup.jpg" style="width:100%">
+        </div>
+
+    </div>
+
+    <br>
+
+    <footer class="text-center text-white" style="background-color: #fd9fd5; padding: 20px; ">
+        <a style="color: white;" href="https://www.instagram.com/hiroshipenguinjoe/">IG:
+            @hiroshipenguinjoe</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
