@@ -18,68 +18,7 @@
 
 
     <style>
-        /*overlaytext*/
-
-
-        .container {
-            position: relative;
-            width: 50%;
-        }
-
-        .image {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .5s ease;
-            background-color: white;
-        }
-
-        .container:hover .overlay {
-            opacity: 50%;
-        }
-
-        .text {
-            color: #fd9fd5;
-            font-size: 20px;
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-
-
-
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial;
-        }
-
-        .header {
-            text-align: center;
-            padding: 32px;
-        }
-
+        /*scrollgallery*/
         .row {
             display: -ms-flexbox;
             /* IE10 */
@@ -136,6 +75,15 @@
             margin-right: 10px;
             /* Adjust the spacing between radio buttons as needed */
         }
+
+
+
+        .bgimage {
+            background: url(images/The\ Limelight.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            padding: 15px;
+        }
     </style>
 
 
@@ -168,14 +116,16 @@
     </div>
 
 
-    <div style="padding-left: 10%;">
-        <div class="typed-out">
-            <h1 style="text-align: left; color: #fd9fd5;"> G A L L E R Y</h1>
+    <div style="padding: 10%; width: 100%; height: 677px;" class="bgimage">
+        <div class="typed-out ">
+            <h1 style="text-align: left; color: #ffdaef;"> G A L L E R Y</h1>
         </div>
+
     </div>
+
     <br>
     <br>
-    <div style="align-items: center; padding-left: 50px;">
+    <div style="align-items: center; padding: 70px;">
         <h2>Which of these album arts is your favorite?</h2>
         <p id="trivia-answer"></p>
         <form action="">
@@ -192,6 +142,8 @@
         <input style="align-content: center;" type="button" value=" S U B M I T " onclick="trivia()">
 
     </div>
+
+
 
     <script src="script.js"></script>
 
